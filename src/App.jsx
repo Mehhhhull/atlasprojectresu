@@ -1,13 +1,40 @@
-import "./App.css"
-import React from 'react'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import "./App.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Country from "./pages/Country";
+import Contact from "./pages/Contact";
+import { AppLayout } from "./components/AppLayout";
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    default:<AppLayout/>,
+    children:[
+      {
+    path: "/",
+    element: <Home/>,
+  },
+  {
+    path: "about",
+    element: <About/>,
+  },
+  {
+    path: "country",
+    element: <Country/>,
+  },
+  {
+    path: "contact",
+    element: <Contact/>,
+  }]
+  }
+  
+]);
 
 const App = () => {
-  return (
-    <div className="container">
-      <h1>Welcome to Atlas Project</h1>
-      <p className="paragraph">This is your React application</p>
-    </div>
-  )
-}
+  return <RouterProvider router={router} />;
+};
 
-export default App
+export default App;
+

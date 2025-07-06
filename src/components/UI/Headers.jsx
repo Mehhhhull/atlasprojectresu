@@ -1,3 +1,11 @@
-export const Headers=()=>{
-  return <h1>Hello headers</h1>;
-};
+import React from 'react'
+
+const Headers = () => {
+  return (
+    <div>
+      <h1>Hello</h1>
+    </div>
+  )
+}
+
+export default Headers

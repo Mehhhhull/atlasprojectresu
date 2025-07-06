@@ -9,27 +9,27 @@ import { AppLayout } from "./components/AppLayout";
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    default:<AppLayout/>,
-    children:[
-      {
     path: "/",
-    element: <Home/>,
-  },
-  {
-    path: "about",
-    element: <About/>,
-  },
-  {
-    path: "country",
-    element: <Country/>,
-  },
-  {
-    path: "contact",
-    element: <Contact/>,
-  }]
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "country",
+        element: <Country />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      }]
   }
-  
+
 ]);
 
 const App = () => {
